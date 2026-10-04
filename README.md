@@ -23,7 +23,7 @@ CKS는 AppArmor, seccomp, kube-bench, Falco 같은 **커널/OS 레벨 주제**�
 ## 빠른 시작
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/Subiahn/cks-lab
 cd cks-lab
 chmod +x cks-lab.sh
 ./cks-lab.sh up        # 약 10~20분 (처음), 이어서 실행 가능
@@ -94,9 +94,9 @@ multipass list --snapshots          # 확인
 **의도적으로 하지 않은 것**: vim 설정, `export do="--dry-run=client -o yaml"` 같은 변수/alias.
 시험 시작 직후 직접 세팅하는 연습을 하기 위해서입니다.
 
-**공식 문서에서 확인하지 못한 것**:
+**Lab의 기본 설정**:
 
-- 시험 클러스터의 **CNI 종류**. 이 랩은 NetworkPolicy를 지원하는 Calico를 선택했습니다.
+- 이 랩은 NetworkPolicy를 지원하는 Calico를 선택했습니다.
 - 시험 노드의 **OS 종류/버전, CPU 아키텍처**. 이 랩은 Ubuntu 22.04 arm64입니다.
 - 시험 노드에 Trivy, kube-bench, Falco 등이 미리 설치되어 있는지. 이 랩은 설치하지 않았으니 도메인별 학습 때 직접 설치하며 연습하세요.
 
